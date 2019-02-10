@@ -1,0 +1,124 @@
+@import "_normalize";
+@import "_variables";
+@import "_fonts";
+
+
+/*********   Main styles    ******/
+%flex-row {
+  display: flex;
+}
+%flex-sb-cen {
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+body{
+  width: 100%;
+  font-family: "Motnserrat", Arial, sans-serif;
+}
+      /*****   Top-bar    *****/
+
+.top-bar {
+  @extend %flex-row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-color-header;
+  padding-left: 170px;
+  padding-right: 170px;
+
+  @media screen and (min-width: 1500px) {
+    padding-left: 441px;
+    padding-right: 441px;
+  }
+
+  &__margin {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.currency-box {
+  @extend %flex-row;
+  &__list {
+    position: relative;
+    list-style: none;
+    a {
+      display: block;
+      color: $color-currency;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+    &> li:hover > .currency-box__submenu {
+      display: block;
+    }
+    &> li:hover i {
+      transform: rotate(180deg);
+    }
+  }
+  &__label {
+    margin-right: 5px;
+    color: $color-currency;
+    font-size: 1.4rem;
+  }
+  &__submenu {
+    display: none;
+    position: absolute;
+    left: -10px;
+    background-color: $bg-color-header;
+    list-style: none;
+    transition: display 0.5s ease-in;
+    li a {
+      padding: 5px 10px;
+    }
+  }
+}
+
+.wrapper-reg {
+  @extend %flex-row;
+  .top-bar__mar {
+    margin-right: 82px;
+  }
+}
+
+.entrance-box {
+  @extend %flex-row;
+  list-style-type: none;
+  li:first-child {
+    margin-right: 30px;
+  }
+    a {
+      color: $color-reg;
+      font-size: 1.3rem;
+
+      &:hover {
+        color: $color-reg-hover;
+      }
+    }
+}
+
+.basket {
+  @extend %flex-row;
+  align-items: center;
+  padding: 14px 24px 14px 22px;
+  &:hover {
+    background-color: $color-basket-hov;
+    .basket__link {
+      color: $color-basket-link-hov;
+    }
+  }
+  &__link {
+    font-size: 1.3rem;
+    color: $color-reg;
+  }
+  &__text {
+    margin-left: 22px;
+    margin-right: 5px;
+  }
+}
+
+
+

@@ -1,0 +1,6 @@
+/******    Fonts    ******/
+
+@font-face {
+  font-family: "Motnserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
