@@ -20,13 +20,13 @@ body{
   min-width: 100%;
   font-family: "Motnserrat", Arial, sans-serif;
 }
-      /*****   Top-bar    *****/
+      /*****   Header    *****/
 
-.top-bar {
+.header {
   @extend %flex-row;
   justify-content: space-between;
   align-items: center;
-  background-color: $bg-color-topBar;
+  background-color: $bg-color-header;
   padding-left: 30px;
   padding-right: 30px;
 
@@ -36,7 +36,10 @@ body{
   }
 }
 
-.top-bar {
+.header {
+  position: relative;
+  z-index: 1;
+
   //@media screen and (min-width: 320px) {
   //  padding-left: 30px;
   //  padding-right: 30px;
@@ -75,6 +78,7 @@ body{
       color: $color-currency;
       font-size: 1.4rem;
       text-transform: uppercase;
+      padding-bottom: 5px;
     }
     &> li:hover > .currency-box__submenu {
       display: block;
@@ -92,7 +96,7 @@ body{
     display: none;
     position: absolute;
     left: -10px;
-    background-color: $bg-color-topBar;
+    background-color: $bg-color-header;
     list-style: none;
     transition: display 0.5s ease-in;
     li a {
@@ -103,16 +107,17 @@ body{
 
 .wrapper-reg {
   @extend %flex-row;
-  .top-bar__mar {
+  .header__mar {
     margin-right: 82px;
   }
 }
+
   /******    Entrance-box   *******/
 
 .entrance-box {
   @extend %flex-row;
   list-style-type: none;
-  li:first-child {
+  li {
     margin-right: 30px;
   }
     a {
@@ -152,6 +157,7 @@ body{
 .bottom-bar {
   background-color: $bg-color-bottomBar;
   position: relative;
+  z-index: 0;
 }
  /******  Header-nav & logo ********/
 
@@ -328,7 +334,7 @@ body{
 /******   Advertisement    ******/
 
 .advertisement {
-  background-color: $bg-color-topBar;
+  background-color: $bg-color-header;
   padding: 62px 53px;
   letter-spacing: 1.8px;
   font-size: 3.5rem;
