@@ -24,45 +24,33 @@ body{
 
 .header {
   @extend %flex-row;
+  position: relative;
+  z-index: 1;
   justify-content: space-between;
   align-items: center;
   background-color: $bg-color-header;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 441px;
+  padding-right: 441px;
 
   &__margin {
     margin-top: 16px;
     margin-bottom: 16px;
   }
-}
-
-.header {
-  position: relative;
-  z-index: 1;
-
-  //@media screen and (min-width: 320px) {
-  //  padding-left: 30px;
-  //  padding-right: 30px;
-  //}
-  //@media screen and (min-width: 375px) {
-  //  padding-left: 40px;
-  //  padding-right: 40px;
-  //}
-  //@media screen and (min-width: 425px) {
-  //  padding-left: 50px;
-  //  padding-right: 50px;
-  //}
-  @media screen and (min-width: 768px) {
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-  @media screen and (min-width: 1440px) {
+  @media screen and (max-width: 1700px) {
     padding-left: 250px;
     padding-right: 250px;
   }
-  @media screen and (min-width: 1920px) {
-    padding-left: 441px;
-    padding-right: 441px;
+  @media screen and (max-width: 1500px) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  @media screen and (max-width: 1100px) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
@@ -168,14 +156,28 @@ body{
   position: absolute;
   width: 100%;
   z-index: 2;
+  @media screen and (max-width: 1700px) {
+    align-items: flex-start;
+  }
+  @media screen and (max-width: 1500px) {
+  align-items: center;
+  padding: 1.3em 3em;
+  }
+  @media screen and (max-width: 1100px) {
+    align-items: center;
+  }
+
 }
 .logo {
   color: $color-logo;
-  font-size: 24px;
+  font-size: 2.4rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   &__second {
     font-weight: 700;
+  }
+  @media screen and (max-width: 1100px) {
+    font-size: 1.8rem;
   }
 }
 
@@ -183,42 +185,131 @@ body{
 .wrapper-menu {
   @extend %flex-row;
   @extend %flex-sb-cen;
-}
-.menu {
-  margin-right: 115px;
+  @media screen and (max-width: 1700px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 1100px) {
+    flex-direction: row-reverse;
+    width: 60%;
+  }
 }
 
-.menu-list {
-  @extend %flex-row;
-  list-style: none;
-  &__item {
-    position: relative;
-    margin-right: 65px;
-    &:hover .menu-list__link {      //how to do shorter
+.menu {
+  position: relative;
+  margin-right: 115px;
+  @media screen and (max-width: 1500px) {
+    margin-right: 30px;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 35%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  &__checkbox {
+    display: none;
+    &:checked ~ .menu__button {
       color: $color-basket-hov;
     }
-    &:hover i {                     //how to do shorter  don't work hover???
-      color: $color-basket-hov;
+    &:checked ~ .menu-list {
+      display: flex;
     }
-    &:hover .submenu-wrapper{
-      display: block;
+  }
+  &-list {
+    @extend %flex-row;
+    list-style: none;
+
+    @media screen and (max-width: 1700px) {
+      margin-bottom: 35px;
     }
-    &:last-child {
+    @media screen and (max-width: 1500px) {
       margin-right: 0;
     }
-    i {
+    @media screen and (max-width: 1100px) {
+      display: none;
       position: absolute;
-      transition: color 0.3s linear;
-      top: 22px;
+      top: 30px;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      position: relative;
+      margin-right: 65px;
+      &:nth-child(4),
+      &:last-child {
+        .submenu-wrapper {
+          right: 0;
+          @media screen and (max-width: 1100px) {
+            right: 100%;
+            top: 15px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1500px) {
+        margin-right: 50px;
+      }
+      @media screen and (max-width: 1100px) {
+        margin-bottom: 15px;
+      }
+      &:hover .menu-list__link {      //how to do shorter
+        color: $color-basket-hov;
+      }
+      &:hover i {                     //how to do shorter  don't work hover???
+        color: $color-basket-hov;
+      }
+      &:hover .submenu-wrapper{
+        display: block;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      i {
+        position: absolute;
+        transition: color 0.3s linear;
+        top: 22px;
+        @media screen and (max-width: 1100px) {
+          display: none;
+        }
+      }
+    }
+    &__link {
+      display: block;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: $color-logo;
+    }
+
+  }
+
+  &__button {
+    display: none;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $color-basket-hov;
+    }
+
+    //@media screen and (max-width: 1100px) {
+    //
+    //}
+    span {
+      font-size: 2rem;
+      margin-right: 5px;
+      text-transform: uppercase;
+    }
+    i:before {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 1100px) {
+      display: block;
     }
   }
-  &__link {
-    display: block;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    color: $color-logo;
-  }
+
+
 }
+
+
 
 /*******   Header-slider   *********/
 
@@ -241,7 +332,10 @@ body{
     text-transform: uppercase;
     color: $color-ave;
     font-weight: 700;
-    span {
+    @media screen and (max-width: 1700px) {
+      font-size: 18vw;
+    }
+    .av {
       letter-spacing: 0.7em;  //in the template the letter-spacing: 22.5px;
     }
 
@@ -257,6 +351,18 @@ body{
     font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 3.2px;
+    @media screen and (max-width: 1500px) {
+      padding: 18px 25px;
+      font-size: 1.3rem;
+      bottom: 4em;
+      right: 8em;
+    }
+    @media screen and (max-width: 1100px) {
+      padding: 10px 15px;
+      font-size: 1rem;
+      bottom: 3.5em;
+      right: 6em;
+    }
   }
 }
 
@@ -281,6 +387,13 @@ body{
       color: $color-text-search;
     }
   }
+  @media screen and (max-width: 1700px) {
+    align-self: flex-end;
+  }
+  @media screen and (max-width: 1100px) {
+    align-self: auto;
+    margin-right: 30px;
+  }
 }
 
 /******  Submenus  *******/
@@ -294,6 +407,11 @@ body{
   padding: 30px;
   background-color: $bg-color-bottomBar;
   box-shadow: 0 17px 24px rgba(0, 0, 0, 0.14);
+  transition: opacity 0.3s ease;
+  @media screen and (max-width: 1100px) {
+    right: 100%;
+    top: 15px;
+  }
   ul {
     list-style: none;
   }
@@ -329,6 +447,7 @@ body{
       font-weight: 300;
     }
   }
+
 
 }
 /******   Advertisement    ******/
