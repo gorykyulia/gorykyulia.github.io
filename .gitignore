@@ -1,7 +1,7 @@
 .idea
 node_modules
+!*/**/gulpfile.js
 FKMIR
-gulpfile.js
-package.json
-package-lock.json
 smartgrid.js
+
+*.map
