@@ -241,26 +241,22 @@ body{
         .submenu-wrapper {
           right: 0;
           @media screen and (max-width: 1100px) {
-            right: 100%;
             top: 15px;
+            right: 100%;
           }
         }
       }
-
+      &:hover,
+      &:active {
+        .submenu-wrapper {
+          display: block;
+        }
+      }
       @media screen and (max-width: 1500px) {
         margin-right: 50px;
       }
       @media screen and (max-width: 1100px) {
         margin-bottom: 15px;
-      }
-      &:hover .menu-list__link {      //how to do shorter
-        color: $color-basket-hov;
-      }
-      &:hover i {                     //how to do shorter  don't work hover???
-        color: $color-basket-hov;
-      }
-      &:hover .submenu-wrapper{
-        display: block;
       }
       &:last-child {
         margin-right: 0;
@@ -279,6 +275,12 @@ body{
       font-size: 1.3rem;
       text-transform: uppercase;
       color: $color-logo;
+      &:hover, &:active {
+        color: $color-basket-hov;
+        + i {
+          color: $color-basket-hov;
+        }
+      }
     }
 
   }
@@ -410,7 +412,7 @@ body{
   transition: opacity 0.3s ease;
   @media screen and (max-width: 1100px) {
     right: 100%;
-    top: 15px;
+    top: 0;
   }
   ul {
     list-style: none;
