@@ -1,5 +1,6 @@
 //   Top-bar
 //$bg-width: 2053px;
+$color-white: #ffffff;
 $bg-color-header: #333333;
 $color-currency: #777777;
 $color-reg: #999999;
@@ -16,6 +17,12 @@ $color-border-search: #e7e7e7;
 $color-text-search: #989898;
 $color-submenu-item: #727272;
 $color-button-border: #737373;
+
+/*     Section goods*/
+
+$color-border: #cccccc;
+$color-price: #919191;
+$color-description: #8e8c8c;
 
 @media screen and (max-width: 1700px) {
 

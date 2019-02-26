@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8">
   <title>AVE_template</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 </head>
-<body>
-
-  <header class="header">
-    <div class="currency-box header__margin">
-      <span class="currency-box__label">Currency : </span>
-      <ul class="currency-box__list">
-        <li><a href="#">gbr <i class="fas fa-angle-down"></i></a>
-          <ul class="currency-box__submenu">
-            <li><a href="#">usa</a></li>
-            <li><a href="#">uan</a></li>
-            <li><a href="#">rus</a></li>
-            <li><a href="#">gbp</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="wrapper-reg">
-      <ul class="entrance-box header__margin">
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Sign in</a></li>
-      </ul>
-      <div class="basket">
-        <a href="#" class="basket__link">
-          <i class="fas fa-shopping-cart"></i>
-          <span class="basket__text">Empty</span>
-          <i class="fas fa-angle-down"></i>
-        </a>
+  <body>
+    <header class="header">
+      <div class="currency-box header__margin">
+        <span class="currency-box__label">Currency : </span>
+        <ul class="currency-box__list">
+          <li><a href="#">gbr <i class="fas fa-angle-down"></i></a>
+            <ul class="currency-box__submenu">
+              <li><a href="#">usa</a></li>
+              <li><a href="#">uan</a></li>
+              <li><a href="#">rus</a></li>
+              <li><a href="#">gbp</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </div>
-  </header>
-
-  <div class="bottom-bar">
-    <div class="header-nav">
-      <div class="logo">
-        <span class="logo__second">Avenue</span>
-        <span>fashion</span>
+      <div class="wrapper-reg">
+        <ul class="entrance-box header__margin">
+          <li><a href="#">Register</a></li>
+          <li><a href="#">Sign in</a></li>
+        </ul>
+        <div class="basket">
+          <a href="#" class="basket__link">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="basket__text">Empty</span>
+            <i class="fas fa-angle-down"></i>
+          </a>
+        </div>
       </div>
-      <div class="wrapper-menu">
-        <nav class="menu">
-          <input type="checkbox" id="checkbox-toggle" class="menu__checkbox">
-          <label for="checkbox-toggle" class="menu__button">
-            <span>Menu</span>
-            <i class="fas fa-bars"></i>
-          </label>
+    </header>
 
-          <ul class="menu-list">
-            <li class="menu-list__item"><a href="#" class="menu-list__link">Mens</a>
-              <i class="fas fa-angle-down"></i>
-              <div class="submenu-wrapper">
+    <div class="bottom-bar">
+      <div class="header-nav">
+        <div class="logo">
+          <span class="logo__second">Avenue</span>
+          <span>fashion</span>
+        </div>
+        <div class="wrapper-menu">
+          <nav class="menu">
+            <input type="checkbox" id="checkbox-toggle" class="menu__checkbox">
+            <label for="checkbox-toggle" class="menu__button">
+              <span>Menu</span>
+              <i class="fas fa-bars"></i>
+            </label>
+
+            <ul class="menu-list">
+              <li class="menu-list__item"><a href="#" class="menu-list__link">Mens</a>
+                <i class="fas fa-angle-down"></i>
+                <div class="submenu-wrapper">
+
+                    <ul class="submenus">
+                      <li class="submenus__item"><a class="submenus__link" href="#">Casual</a>
+                        <ul class="submenu">
+                          <li><a href="#">Jackets</a></li>
+                          <li><a href="#">Hoodies & Sweatshirts</a></li>
+                          <li><a href="#">Polo Shirts</a></li>
+                          <li><a href="#">Sportswear</a></li>
+                          <li><a href="#">Trousers & Chinos</a></li>
+                          <li><a href="#">T-Shirts</a></li>
+                        </ul>
+                      </li>
+                      <li class="submenus__item"><a class="submenus__link" href="#">Formal</a>
+                        <ul class="submenu">
+                          <li><a href="#">Jackets</a></li>
+                          <li><a href="#">Shirts</a></li>
+                          <li><a href="#">Suits</a></li>
+                          <li><a href="#">Trosers</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                  <div class="advertisement submenu-wrapper-margin">
+                    <p class="advertisement__text">                       <!--wrong rendering in browser-->
+                      <h4 class="advertisement__title">Autumn sale!</h4>
+                      up to 50% off
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+              <li class="menu-list__item"><a href="#" class="menu-list__link">Women</a>
+                <i class="fas fa-angle-down"></i>
+                <div class="submenu-wrapper">
 
                   <ul class="submenus">
                     <li class="submenus__item"><a class="submenus__link" href="#">Casual</a>
@@ -80,165 +113,242 @@
                     </li>
                   </ul>
 
-                <div class="advertisement submenu-wrapper-margin">
-                  <p class="advertisement__text">                       <!--wrong rendering in browser-->
+                  <div class="advertisement submenu-wrapper-margin">
+                    <p class="advertisement__text">                       <!--wrong rendering in browser-->
                     <h4 class="advertisement__title">Autumn sale!</h4>
                     up to 50% off
-                  </p>
+                    </p>
+                  </div>
+
                 </div>
+              </li>
+              <li class="menu-list__item"><a href="#" class="menu-list__link">The brand</a>
+                <i class="fas fa-angle-down"></i>
+                <div class="submenu-wrapper">
 
-              </div>
-            </li>
-            <li class="menu-list__item"><a href="#" class="menu-list__link">Women</a>
-              <i class="fas fa-angle-down"></i>
-              <div class="submenu-wrapper">
+                  <ul class="submenus">
+                    <li class="submenus__item"><a class="submenus__link" href="#">Casual</a>
+                      <ul class="submenu">
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                        <li><a href="#">Polo Shirts</a></li>
+                        <li><a href="#">Sportswear</a></li>
+                        <li><a href="#">Trousers & Chinos</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                      </ul>
+                    </li>
+                    <li class="submenus__item"><a class="submenus__link" href="#">Formal</a>
+                      <ul class="submenu">
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Suits</a></li>
+                        <li><a href="#">Trosers</a></li>
+                      </ul>
+                    </li>
+                  </ul>
 
-                <ul class="submenus">
-                  <li class="submenus__item"><a class="submenus__link" href="#">Casual</a>
-                    <ul class="submenu">
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Hoodies & Sweatshirts</a></li>
-                      <li><a href="#">Polo Shirts</a></li>
-                      <li><a href="#">Sportswear</a></li>
-                      <li><a href="#">Trousers & Chinos</a></li>
-                      <li><a href="#">T-Shirts</a></li>
-                    </ul>
-                  </li>
-                  <li class="submenus__item"><a class="submenus__link" href="#">Formal</a>
-                    <ul class="submenu">
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Shirts</a></li>
-                      <li><a href="#">Suits</a></li>
-                      <li><a href="#">Trosers</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                  <div class="advertisement submenu-wrapper-margin">
+                    <p class="advertisement__text">                       <!--wrong rendering in browser-->
+                    <h4 class="advertisement__title">Autumn sale!</h4>
+                    up to 50% off
+                    </p>
+                  </div>
 
-                <div class="advertisement submenu-wrapper-margin">
-                  <p class="advertisement__text">                       <!--wrong rendering in browser-->
-                  <h4 class="advertisement__title">Autumn sale!</h4>
-                  up to 50% off
-                  </p>
                 </div>
+              </li>
+              <li class="menu-list__item"><a href="#" class="menu-list__link">Local stores</a>
+                <i class="fas fa-angle-down"></i>
+                <div class="submenu-wrapper">
 
-              </div>
-            </li>
-            <li class="menu-list__item"><a href="#" class="menu-list__link">The brand</a>
-              <i class="fas fa-angle-down"></i>
-              <div class="submenu-wrapper">
+                  <ul class="submenus">
+                    <li class="submenus__item"><a class="submenus__link" href="#">Casual</a>
+                      <ul class="submenu">
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                        <li><a href="#">Polo Shirts</a></li>
+                        <li><a href="#">Sportswear</a></li>
+                        <li><a href="#">Trousers & Chinos</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                      </ul>
+                    </li>
+                    <li class="submenus__item"><a class="submenus__link" href="#">Formal</a>
+                      <ul class="submenu">
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Suits</a></li>
+                        <li><a href="#">Trosers</a></li>
+                      </ul>
+                    </li>
+                  </ul>
 
-                <ul class="submenus">
-                  <li class="submenus__item"><a class="submenus__link" href="#">Casual</a>
-                    <ul class="submenu">
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Hoodies & Sweatshirts</a></li>
-                      <li><a href="#">Polo Shirts</a></li>
-                      <li><a href="#">Sportswear</a></li>
-                      <li><a href="#">Trousers & Chinos</a></li>
-                      <li><a href="#">T-Shirts</a></li>
-                    </ul>
-                  </li>
-                  <li class="submenus__item"><a class="submenus__link" href="#">Formal</a>
-                    <ul class="submenu">
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Shirts</a></li>
-                      <li><a href="#">Suits</a></li>
-                      <li><a href="#">Trosers</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                  <div class="advertisement submenu-wrapper-margin">
+                    <p class="advertisement__text">                       <!--wrong rendering in browser-->
+                    <h4 class="advertisement__title">Autumn sale!</h4>
+                    up to 50% off
+                    </p>
+                  </div>
 
-                <div class="advertisement submenu-wrapper-margin">
-                  <p class="advertisement__text">                       <!--wrong rendering in browser-->
-                  <h4 class="advertisement__title">Autumn sale!</h4>
-                  up to 50% off
-                  </p>
                 </div>
+              </li>
+              <li class="menu-list__item"><a href="#" class="menu-list__link">Look book</a>
+                <i class="fas fa-angle-down"></i>
+                <div class="submenu-wrapper">
 
-              </div>
-            </li>
-            <li class="menu-list__item"><a href="#" class="menu-list__link">Local stores</a>
-              <i class="fas fa-angle-down"></i>
-              <div class="submenu-wrapper">
+                  <ul class="submenus">
+                    <li class="submenus__item"><a class="submenus__link" href="#">Casual</a>
+                      <ul class="submenu">
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                        <li><a href="#">Polo Shirts</a></li>
+                        <li><a href="#">Sportswear</a></li>
+                        <li><a href="#">Trousers & Chinos</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                      </ul>
+                    </li>
+                    <li class="submenus__item"><a class="submenus__link" href="#">Formal</a>
+                      <ul class="submenu">
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Suits</a></li>
+                        <li><a href="#">Trosers</a></li>
+                      </ul>
+                    </li>
+                  </ul>
 
-                <ul class="submenus">
-                  <li class="submenus__item"><a class="submenus__link" href="#">Casual</a>
-                    <ul class="submenu">
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Hoodies & Sweatshirts</a></li>
-                      <li><a href="#">Polo Shirts</a></li>
-                      <li><a href="#">Sportswear</a></li>
-                      <li><a href="#">Trousers & Chinos</a></li>
-                      <li><a href="#">T-Shirts</a></li>
-                    </ul>
-                  </li>
-                  <li class="submenus__item"><a class="submenus__link" href="#">Formal</a>
-                    <ul class="submenu">
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Shirts</a></li>
-                      <li><a href="#">Suits</a></li>
-                      <li><a href="#">Trosers</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                  <div class="advertisement submenu-wrapper-margin">
+                    <p class="advertisement__text">                       <!--wrong rendering in browser-->
+                    <h4 class="advertisement__title">Autumn sale!</h4>
+                    up to 50% off
+                    </p>
+                  </div>
 
-                <div class="advertisement submenu-wrapper-margin">
-                  <p class="advertisement__text">                       <!--wrong rendering in browser-->
-                  <h4 class="advertisement__title">Autumn sale!</h4>
-                  up to 50% off
-                  </p>
                 </div>
-
-              </div>
-            </li>
-            <li class="menu-list__item"><a href="#" class="menu-list__link">Look book</a>
-              <i class="fas fa-angle-down"></i>
-              <div class="submenu-wrapper">
-
-                <ul class="submenus">
-                  <li class="submenus__item"><a class="submenus__link" href="#">Casual</a>
-                    <ul class="submenu">
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Hoodies & Sweatshirts</a></li>
-                      <li><a href="#">Polo Shirts</a></li>
-                      <li><a href="#">Sportswear</a></li>
-                      <li><a href="#">Trousers & Chinos</a></li>
-                      <li><a href="#">T-Shirts</a></li>
-                    </ul>
-                  </li>
-                  <li class="submenus__item"><a class="submenus__link" href="#">Formal</a>
-                    <ul class="submenu">
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Shirts</a></li>
-                      <li><a href="#">Suits</a></li>
-                      <li><a href="#">Trosers</a></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <div class="advertisement submenu-wrapper-margin">
-                  <p class="advertisement__text">                       <!--wrong rendering in browser-->
-                  <h4 class="advertisement__title">Autumn sale!</h4>
-                  up to 50% off
-                  </p>
-                </div>
-
-              </div>
-            </li>
-          </ul>
-        </nav>
-        <form action="post" class="search-form">
-          <input type="text" class="search-form__field" placeholder="Search">
-          <i class="fas fa-search"></i>
-        </form>
+              </li>
+            </ul>
+          </nav>
+          <form action="post" class="search-form">
+            <input type="text" class="search-form__field" placeholder="Search">
+            <i class="fas fa-search"></i>
+          </form>
+        </div>
+      </div>
+      <div class="header-slider">
+        <p class="header-slider__text"><span class="av">av</span><span>e</span></p>
+        <img src="image/front-photo.jpg" alt="This is a photo" class="header-slider__image">
+        <a href="#" class="header-slider__link">shop men’s collection</a>
       </div>
     </div>
-    <div class="header-slider">
-      <p class="header-slider__text"><span class="av">av</span><span>e</span></p>
-      <img src="image/front-photo.jpg" alt="This is a photo" class="header-slider__image">
-      <a href="#" class="header-slider__link">shop men’s collection</a>
-    </div>
-  </div>
 
-</body>
+    <section class="section goods">
+      <div class="wrapper">
+        <nav class="goods-menu wrapper-goods-menu">
+          <div class="goods-list">
+            <div class="goods-list__item"><a href="#" class="goods-list__link">popular</a></div>
+            <div class="goods-list__item"><a href="#" class="goods-list__link">new arrivals</a></div>
+            <div class="goods-list__item"><a href="#" class="goods-list__link">best sellers</a></div>
+            <div class="goods-list__item"><a href="#" class="goods-list__link">special offers</a></div>
+            <div class="goods-list__item"><a href="#" class="goods-list__link">coming soon</a></div>
+          </div>
+        </nav>
+        <div class="goods-photos">
+
+          <div class="goods-column">
+            <div class="goods-row">
+              <div class="goods-item">
+                <div class="goods-item__view">
+                  <img src="image/photo1.jpg" class="goods-item__image"></img>
+                  <div class="goods-item__price">
+                    <sup>&pound;</sup><span>29.95</span>
+                  </div>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+
+              </div>
+              <div class="goods-item">
+                <div class="goods-item__view">
+                  <img src="image/photo2.jpg" class="goods-item__image"></img>
+                  <div class="goods-item__price">
+                    <sup>&pound;</sup><span>47.50</span>
+                  </div>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+
+              </div>
+            </div>
+            <div class="goods-row">
+              <div class="goods-item large">
+                <div class="goods-item__view">
+                  <img src="image/photo3.jpg" class="goods-item__image"></img>
+                  <div class="goods-item__price">
+
+                    <sup>&pound;</sup><span>69.95</span>
+                  </div>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="goods-column">
+            <div class="goods-row">
+              <div class="goods-item large">
+                <div class="goods-item__view">
+                  <img src="image/photo4.jpg" class="goods-item__image"></img>
+                  <div class="goods-item__price">
+
+                    <sup>&pound;</sup><span>69.95</span>
+                  </div>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+
+              </div>
+            </div>
+            <div class="goods-row">
+              <div class="goods-item">
+                <div class="goods-item__view">
+                  <img src="image/photo5.jpg" class="goods-item__image"></img>
+                  <div class="goods-item__price">
+                    <sup>&pound;</sup><span>29.95</span>
+                  </div>
+                  <div class="goods-item__mini">
+                    <img src="image/mini1.jpg" alt="This is mini photo">
+                    <img src="image/mini2.jpg" alt="This is mini photo">
+                  </div>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="goods-item__info">
+                  <h3 class="goods-item__title">Womens burnt orange casual tee  £29.95</h3>
+                  <p class="goods-item__description">Classic casual t-shirt for women on the move.  100% cotton.</p>
+                  <div class="goods-item__icons">
+                    <div class="goods-item__icon">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="goods-item__icon">
+                      <i class="far fa-heart"></i>
+                    </div>
+                    <div class="goods-item__icon">
+                      <i class="fas fa-compress-arrows-alt"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="goods-item">
+                <div class="goods-item__view">
+                  <img src="image/photo6.jpg" class="goods-item__image"></img>
+                  <div class="goods-item__price">
+                    <sup>&pound;</sup><span>47.50</span>
+                  </div>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
